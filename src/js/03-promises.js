@@ -27,7 +27,7 @@ function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
   return new Promise((resolve, reject) => {
 
-   timeoutId = setTimeout(() => {
+  setTimeout(() => {
       if (shouldResolve) {
         resolve({ position, delay });
       } else {
@@ -37,3 +37,4 @@ function createPromise(position, delay) {
   });
 };
 
+console.log('fff')
