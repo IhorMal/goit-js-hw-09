@@ -2,14 +2,19 @@
 const ref = {
   form: document.querySelector('.form'),
 };
-
+let amountNumber = null;
+let delayNumber = null;
+let stepNumber = null;
 ref.form.addEventListener('submit', (e) => {
   e.preventDefault()
 
   const { delay, step, amount } = e.target.elements;
-  let amountNumber = Number(amount.value);
-  let delayNumber = Number(delay.value);
-  let stepNumber = Number(step.value);
+  amountNumber = Number(amount.value);
+  delayNumber = Number(delay.value);
+  stepNumber = Number(step.value);
+  console.log('amountNumber' + amountNumber)
+  console.log('delayNumber' + delayNumber)
+  console.log('stepNumber' + stepNumber)
 
   for (let i = 1; i <= amountNumber; i += 1) {
     createPromise(i, delayNumber)
@@ -37,3 +42,4 @@ function createPromise(position, delay) {
   });
 };
 
+console.warn('ddf')
