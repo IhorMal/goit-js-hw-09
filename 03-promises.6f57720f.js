@@ -1,0 +1,2 @@
+function e(e,t){const o=Math.random()>.3;return new Promise(((n,r)=>{timeoutId=setTimeout((()=>{o?n({position:e,delay:t}):r({position:e,delay:t})}),t)}))}({form:document.querySelector(".form")}).form.addEventListener("submit",(t=>{t.preventDefault();const{delay:o,step:n,amount:r}=t.target.elements;let a=Number(r.value),u=Number(o.value),i=Number(n.value);for(let t=1;t<=a;t+=1)e(t,u).then((({position:e,delay:t})=>{})).catch((({position:e,delay:t})=>{})),u+=i}));
+//# sourceMappingURL=03-promises.6f57720f.js.map

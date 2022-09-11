@@ -1,0 +1,2 @@
+!function(){function e(e,t){var n=Math.random()>.3;return new Promise((function(o,u){timeoutId=setTimeout((function(){n?o({position:e,delay:t}):u({position:e,delay:t})}),t)}))}({form:document.querySelector(".form")}).form.addEventListener("submit",(function(t){t.preventDefault();for(var n=t.target.elements,o=n.delay,u=n.step,i=n.amount,r=Number(i.value),a=Number(o.value),m=Number(u.value),f=1;f<=r;f+=1)e(f,a).then((function(e){e.position,e.delay})).catch((function(e){e.position,e.delay})),a+=m}))}();
+//# sourceMappingURL=03-promises.fe208ff5.js.map
