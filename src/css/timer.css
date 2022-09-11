@@ -1,0 +1,39 @@
+#datetime-picker {
+  padding: 5px;
+  font-size: 18px;
+  width: 300px;
+}
+button {
+  margin-left: 20px;
+  border: 2 solid rgba(76, 175, 80, 0.8);
+  padding: 10px 17px;
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: rgba(76, 175, 80, 0.9);
+  color: white;
+}
+.timer {
+  display: flex;
+  margin-top: 10px;
+}
+
+.field {
+  margin-left: 10px;
+}
+.field::after {
+  content: '';
+  border-right: 2px solid black;
+  margin-left: 6px;
+}
+.field:last-child::after {
+  content: '';
+  border-right: none;
+}
+
+.field .label {
+  font-size: 26px;
+}
+.field .value {
+  font-size: 18px;
+}
