@@ -40,10 +40,14 @@ const options = {
     button.addEventListener('click', taimer) 
       
     function taimer() {
-    if (intervalId) return;
-    let timeMS = selectedDates[0] - new Date();     
-    
-    intervalId = setInterval(() => {
+      if (intervalId) return;
+      
+      let timeMS = selectedDates[0] - new Date(); 
+      
+      button.disabled = true;
+      datetimePicker.disabled = true;
+
+      intervalId = setInterval(() => {
       timeMS -= 1000;
       if (timeMS < 0) {
           clearInterval(intervalId);
